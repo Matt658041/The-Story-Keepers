@@ -1,2 +1,2 @@
 # The-Story-Keepers
-A  gathering place for book lovers to search for, and post about their favorite books.
+A  gathering place for book lovers to search for, post about, and vote for their favorite books.
