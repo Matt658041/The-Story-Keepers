@@ -2,16 +2,7 @@
 document.querySelector("#submit-button").addEventListener("click", searchBook);
 document.querySelector("#submit").addEventListener("click", searchBook);
 
-//Place saved Local storage item into search bar
-var storedItem = localStorage.getItem('search-input');
-console.log(storedItem);
-function storedBook(){
-  document.getElementById("search-input").value = storedItem;
-  searchBook();
-  getBeer();
-};
 
-storedBook();
 
 
 // When user inputs the search bar and clicked search button, start searching
@@ -46,8 +37,7 @@ function searchBook(event) {
 
   // Display "Search results of" text when clicked the search button
   document.querySelector(".text").innerHTML = `Search results for: "${query}"`;
-  //Save the search within Local Storage
-  localStorage.setItem("search-input", query);
+
 }
 
 // Start searching the lists when user clicks entry key
