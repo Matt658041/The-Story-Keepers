@@ -37,7 +37,6 @@ function searchBook(event) {
 
   // Display "Search results of" text when clicked the search button
   document.querySelector(".text").innerHTML = `Search results for: "${query}"`;
-
 }
 
 // Start searching the lists when user clicks entry key
