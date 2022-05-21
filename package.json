@@ -28,11 +28,7 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
-<<<<<<< HEAD
-    "nodemon": "^2.0.16",
-=======
     "node-fetch": "^3.2.4",
->>>>>>> 01b62c231f7ff5fe6e17741ebf6dd461ee6ca524
     "sequelize": "^6.19.0"
   }
 }
