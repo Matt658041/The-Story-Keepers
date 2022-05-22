@@ -1,10 +1,10 @@
-async function newFormHandler(event) {
+async function newBookSearch(event) {
     event.preventDefault();
 
-    const title = document.querySelector('input[name= "post-title"]').value;
-    const post_url = document.querySelector('input[name= "post_url"]').value;
+    const title = document.querySelector('input[name= "book-search"]').value;
+    const post_url = document.querySelector('input[name= "post-url"]').value;
 
-    const response = await fetch('/api/posts', {
+    const response = await fetch('/https://www.googleapis.com/books/v1/volumes?q=${query}`', {
         method: 'POST',
         body: JSON.stringify({
             title,
