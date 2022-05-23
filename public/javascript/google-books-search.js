@@ -1,7 +1,3 @@
-const books = require('google-books-search');
-const bodyParser = require('body-parser');
-
-
 
 async function newFormHandler(event) {
     event.preventDefault();
@@ -9,7 +5,7 @@ async function newFormHandler(event) {
     const title = document.querySelector('input[name="google-books-search"]').value;
     const post_url = document.querySelector('input[name="google-books-search"]').value;
   
-    const response = await fetch(`/api/posts`, {
+    const response = await fetch(`/api/book-search.js`, {
       method: 'POST',
       body: JSON.stringify({
         title,
@@ -27,6 +23,6 @@ async function newFormHandler(event) {
     }
   }
   
-  document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+  document.querySelector('submit-button').addEventListener('submit', newFormHandler);
 
 
