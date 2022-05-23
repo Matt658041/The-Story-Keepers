@@ -23,6 +23,6 @@ async function newFormHandler(event) {
     }
   }
   
-  document.querySelector('submit-button').addEventListener('submit', newFormHandler);
+  document.querySelector('.submit-button').addEventListener('submit', newFormHandler);
 
 
