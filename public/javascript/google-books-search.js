@@ -5,7 +5,7 @@ async function newFormHandler(event) {
     const title = document.querySelector('input[name="google-books-search"]').value;
     const post_url = document.querySelector('input[name="google-books-search"]').value;
   
-    const response = await fetch(`/api/book-search.js`, {
+    const response = await fetch(`/api/`, {
       method: 'POST',
       body: JSON.stringify({
         title,
