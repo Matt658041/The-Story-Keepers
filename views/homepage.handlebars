@@ -5,3 +5,17 @@
   </li>
   {{/each}}
 </ol>
+
+{{#if searchResults}}
+<ol>
+  {{#each searchResults as |book| }}
+    <li>
+      <div>
+        {{book.title}}
+
+        <p>{{book.description}}</p>
+      </div>
+    </li>
+  {{/each}}
+</ol>
+{{/if}}
