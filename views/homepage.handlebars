@@ -4,6 +4,7 @@
     {{> post-info post }}
   </li>
   {{/each}}
+  ..................................................................................................................
 </ol>
 
 {{#if searchResults}}
@@ -11,7 +12,8 @@
   {{#each searchResults as |book| }}
     <li>
       <div>
-        <img src="{{thumbnail}}" alt="Book Cover Thumbnail"/>        
+        <img src="{{thumbnail}}" alt="Book Cover Thumbnail"/>    
+        <a href="{{link}}">Click here to view </a>    
         <h3>{{title}}</h3>
         <ul>
           <li>{{description}}</li>
