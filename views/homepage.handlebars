@@ -11,10 +11,13 @@
   {{#each searchResults as |book| }}
     <li>
       <div>
-        {{book.title}}
-
-        <p>{{book.subTitle}}</p>
-        <p>{{book.description}}</p>
+        <img src="{{thumbnail}}" alt="Book Cover Thumbnail"/>        
+        <h3>{{title}}</h3>
+        <ul>
+          <li>{{description}}</li>
+          <li>{{authors}}</li>
+          <li>{{publishedDate}}</li>
+        </ul>
       </div>
     </li>
   {{/each}}
