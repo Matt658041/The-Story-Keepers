@@ -1,4 +1,6 @@
-<ol class="post-list">
+<div class="container">
+<div class="row align-items-start">
+<ol class="post-list col">
   {{#each posts as |post|}}
   <li>
     {{> post-info post }}
@@ -6,8 +8,10 @@
   {{/each}}
 </ol>
 
+
+
 {{#if searchResults}}
-<ol>
+<ol class="col">
   {{#each searchResults as |book| }}
     <li>
       <div>
@@ -25,4 +29,6 @@
     </li>
   {{/each}}
 </ol>
+</div>
 {{/if}}
+</div>
