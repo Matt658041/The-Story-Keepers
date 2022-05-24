@@ -11,11 +11,15 @@
   {{#each searchResults as |book| }}
     <li>
       <div>
-        <img src="{{thumbnail}}" alt="Book Cover Thumbnail"/>        
         <h3>{{title}}</h3>
+        <img src="{{thumbnail}}" alt="Book Cover Thumbnail"/>        
+        <a href="{{link}}"  target="blank"><br><button class="btn btn-primary btn-sm" >CLICK FOR<br>MORE INFO</a></button>
+
         <ul>
           <li>{{authors}}</li>
           <li>{{publishedDate}}</li>
+          <li>{{description}}</li>
+          
         </ul>
       </div>
     </li>
