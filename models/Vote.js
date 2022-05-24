@@ -1,3 +1,4 @@
+const { recommendationengine } = require('googleapis/build/src/apis/recommendationengine');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -23,6 +24,9 @@ Vote.init(
         model: 'post',
         key: 'id'
       }
+    },
+    rating: {
+      type: DataTypes.INTEGER,
     }
   },
   {
