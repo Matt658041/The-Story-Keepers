@@ -1,35 +1,12 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 // create our Post model
 class Post extends Model {
   static upvote(body, models) {
     return models.Vote.create({
       user_id: body.user_id,
       post_id: body.post_id,
-      rating: body.rating
-    }).then(() => {
-      return Post.findOne({
-        where: {
-          id: body.post_id
-        },
-        attributes: [
-          'id',
-          'post_url',
-          'title',
-          'created_at',
-          [sequelize.literal('(SELECT AVG(rating) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
-        ],
-        include: [
-          {
-            model: models.Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-            include: {
-              model: models.User,
-              attributes: ['username']
-            }
-          }
-        ]
-      });
+      rating: body.rating,
     });
   }
 }
@@ -41,32 +18,32 @@ Post.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     post_url: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isURL: true
-      }
+        isURL: true,
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
-        key: 'id'
-      }
-    }
+        model: "user",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post'
+    modelName: "post",
   }
 );
 
