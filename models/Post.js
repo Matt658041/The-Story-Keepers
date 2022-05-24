@@ -5,7 +5,8 @@ class Post extends Model {
   static upvote(body, models) {
     return models.Vote.create({
       user_id: body.user_id,
-      post_id: body.post_id
+      post_id: body.post_id,
+      rating: body.rating
     }).then(() => {
       return Post.findOne({
         where: {
@@ -16,7 +17,7 @@ class Post extends Model {
           'post_url',
           'title',
           'created_at',
-          [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+          [sequelize.literal('(SELECT AVG(rating) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
         include: [
           {
