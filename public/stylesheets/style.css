@@ -236,7 +236,7 @@ sup {
 }
 
 a {
-  color: #212529;
+  color: white;
   text-decoration: none;
 }
 a:hover {
@@ -335,6 +335,7 @@ label {
 
 button {
   border-radius: 0;
+  color: white;
 }
 
 button:focus:not(:focus-visible) {
