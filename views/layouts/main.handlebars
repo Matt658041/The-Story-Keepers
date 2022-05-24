@@ -58,9 +58,11 @@
                             <!-- Email address input-->
                             <div class="row">
                                 <div class="col">
-                                    <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Search" data-sb-validations="Search" />
+                                    <form action="/seach" method="post">     
+                                    <input class="form-control form-control-lg" id="seatch" name="search" type="text" placeholder="Search" />
                                     <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
                                     <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                    </form>
                                 </div>
                                 <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
                             </div>
