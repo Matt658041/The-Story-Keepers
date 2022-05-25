@@ -1,11 +1,8 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
     MIT
-
-
-  <h1 align='center'>The Story Keepers <h1/> 
-
-
+   
+   <h1 align='center'>The Story Keepers <h1/> 
   ## Description
   A blog site where you can search for your favorite book and post about it. You can also make comments and vote on them.
 
