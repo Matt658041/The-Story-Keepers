@@ -54,17 +54,15 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Email address input-->
+                        <form class="form-subscribe" id="contactForm" action="/search" method="post">
+                            
                             <div class="row">
                                 <div class="col">
-                                    <form action="/seach" method="post">     
-                                    <input class="form-control form-control-lg" id="seatch" name="search" type="text" placeholder="Search" />
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                    <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-                                    </form>
+                                    <input class="form-control form-control-lg" id="search" name="search" type="text" placeholder="Search" />
                                 </div>
-                                <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+                                </div>
                             </div>
                             <!-- Submit success message-->
                             <!---->

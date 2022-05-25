@@ -1,3 +1,6 @@
+const sequelize = require('../config/connection');
+const { Post, User, Comment, Vote } = require('../models');
+
 function getPosts() {
     return Post.findAll({
         attributes: [

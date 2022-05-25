@@ -2,17 +2,19 @@ const router = require('express').Router();
 const books = require('google-books-search');
 const  { getPosts } = require('./utils')
 
-router.get('/', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
+    console.log('is this working? ')
+    const searchQuery = req.body.search;
+    console.log(searchQuery)
     try {
-        const searchQuery = req.body.search;
 
         const posts = await getPosts();
 
         books.search(searchQuery, function(error, results) {
-            if ( ! error ) {
-                next(err)
+            if (error) {
+                next(error)
             } else {
-
+                console.log(results)
 
                 res.render('homepage', {
                     searchResults: results,
@@ -26,4 +28,5 @@ router.get('/', async (req, res, next) => {
         next(err)
     }
 })
+
 module.exports = router;
