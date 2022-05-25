@@ -101,6 +101,11 @@ body {
     box-sizing:content-box;
 }
 
+.post-content {
+  height: 200px;
+  width: 400px;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -248,7 +253,7 @@ sup {
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 a:hover {
@@ -347,7 +352,7 @@ label {
 
 button {
   border-radius: 0;
-  color: white;
+  
 }
 
 button:focus:not(:focus-visible) {
