@@ -1,11 +1,15 @@
 {
-  "name": "hacker-news-clone",
+  "name": "the-story-keepers",
   "version": "1.0.0",
-  "description": "",
+  "description": "A  gathering place for book lovers to search for, and post about their favorite books.",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "seeds": "node seeds/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matt658041/The-Story-Keepers.git"
   },
   "author": "",
   "license": "ISC",
