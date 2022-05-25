@@ -20,7 +20,7 @@
   - [Questions](#questions)
   
   ## Installation
-  For installation you will need Googleapis/books,Google-book-search, Bcrypt, Connect-session-sequeize, Dotenv, Express, Express-session, handlebars, mysql, sequelize,  
+  (Requires Node) Fork Project, run npm i to install dependencies, run npm start to run on local host.  
 
   ## Usage
   Free to use for all book lovers!
