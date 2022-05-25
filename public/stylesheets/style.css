@@ -89,6 +89,8 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
+
 .scroll {
   display: flex;  
   margin:4px, 4px;
@@ -101,10 +103,8 @@ body {
     box-sizing:content-box;
 }
 
-.post-content {
-  height: 200px;
-  width: 400px;
-}
+
+
 
 hr {
   margin: 1rem 0;
