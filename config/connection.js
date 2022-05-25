@@ -1,3 +1,4 @@
+// declare variables 
 const Sequelize = require('sequelize');
 
 require('dotenv').config();
