@@ -1,4 +1,6 @@
-<ol class="post-list">
+<div class="container homepage-container">
+<div class="row align-items-start">
+<ol class="post-list flex-column col">
   {{#each posts as |post|}}
   <li>
     {{> post-info post }}
@@ -6,16 +8,27 @@
   {{/each}}
 </ol>
 
+
+
 {{#if searchResults}}
-<ol>
+<ol class="scroll search-results d-flex flex-wrap col">
   {{#each searchResults as |book| }}
     <li>
       <div>
-        {{book.title}}
+        <h3>{{title}}</h3>
+        <img src="{{thumbnail}}" alt="Book Cover Thumbnail"/>        
+        <a href="{{link}}"  target="blank"><br><button class="btn btn-primary btn-sm" >CLICK FOR<br>MORE INFO</a></button>
 
-        <p>{{book.subTitle}}</p>
+        <ul>
+          <li>{{authors}}</li>
+          <li>{{publishedDate}}</li>
+          <li>{{description}}</li>
+          
+        </ul>
       </div>
     </li>
   {{/each}}
 </ol>
+</div>
 {{/if}}
+</div>
