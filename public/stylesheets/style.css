@@ -89,6 +89,26 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.editpost-comment {
+  margin: 20px;
+  padding: 20px;
+}
+
+.scroll {
+  display: flex;  
+  margin:4px, 4px;
+    padding:4px;
+    width: 400px;
+    height: 550px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align:justify;
+    box-sizing:content-box;
+}
+
+
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -236,7 +256,7 @@ sup {
 }
 
 a {
-  color: #212529;
+  color: black;
   text-decoration: none;
 }
 a:hover {
@@ -335,6 +355,7 @@ label {
 
 button {
   border-radius: 0;
+  
 }
 
 button:focus:not(:focus-visible) {
@@ -595,7 +616,7 @@ progress {
   color: #6c757d;
 }
 .blockquote-footer::before {
-  content: "— ";
+  content: "— ";
 }
 
 .img-fluid {

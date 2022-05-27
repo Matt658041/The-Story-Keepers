@@ -30,9 +30,20 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(require('./controllers/'));
+
+app.use((error, req, res, next) => {
+  if(res.headersSent) {
+    next(err)
+  }
+  console.log(error.stack)
+  res.status(500)
+  res.render('error', {
+    error
+  })
+})
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
