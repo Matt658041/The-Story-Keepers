@@ -1,20 +1,27 @@
+<div class="d-flex justify-content-center ">
+<div class="containter d-flex flex-wrap">
+<div class="row align-items-start">
+<div class="flex-column col">
 {{> post-info post}}
+<br>
+{{> comments post.comments}}
 
 {{#if loggedIn}}
+</div>
+</div>
+</div>
 <form class="comment-form">
-  <div>
+  <div class="form-group">
     <textarea name="comment-body"></textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+    <button class="btn btn-primary" type="submit">add comment</button>
+    <button class="btn btn-primary" type="button" class="upvote-btn">upvote</button>
   </div>
 </form>
 {{/if}}
-
-{{> comments post.comments}}
-
+</div>
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
